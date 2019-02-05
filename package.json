@@ -4,6 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run start-client",
+    "start-client": "npm run dev-client",
+    "start-server": "npm run dev-server",
+    "dev-client": "webpack-dev-server --config webpack.config.client -d --open",
+    "dev-server": "webpack-dev-server --config webpack.config.server -d --open",
+    "build-client": "webpack --config webpack.config.client -o build/client/index.js -p",
+    "build-server": "webpack --config webpack.config.server -o build/server/index.js -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +23,21 @@
   "bugs": {
     "url": "https://github.com/ariverak/chat-realtime/issues"
   },
-  "homepage": "https://github.com/ariverak/chat-realtime#readme"
+  "homepage": "https://github.com/ariverak/chat-realtime#readme",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
