@@ -8,7 +8,7 @@
     "start-client": "npm run dev-client",
     "start-server": "npm run dev-server",
     "dev-client": "webpack-dev-server --config webpack.config.client -d --open",
-    "dev-server": "webpack-dev-server --config webpack.config.server -d --open",
+    "dev-server": "npm run build-server && node build/server/index.js",
     "build-client": "webpack --config webpack.config.client -o build/client/index.js -p",
     "build-server": "webpack --config webpack.config.server -o build/server/index.js -p",
     "test": "echo \"Error: no test specified\" && exit 1"
